@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(46, 45, 45);
+
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(230, 40, 255);
+}
+
+ img{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 100px;
+}
+
+.clock {
+    color: rgb(0, 0, 0);
+}
+
+.clock span {
+    font-size: 80px;
+    width: 91px;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 3px purple;
+    position: relative;
+    text-shadow: 5px 9px 10px black;
+}
+
+span::before {
+    content: "";
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    overflow: hidden;
+    color: rgb(171, 3, 171);
+    border-right: 5rem solid darkmagenta;
+    transition: 1s ease-in-out;
+}
+
+.no::before {
+    display: none;
+}
+
+span:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px rgb(156, 0, 156));
+    box-shadow: inset 3px 4px 9px 0px black;
+}
